@@ -4,6 +4,7 @@
 #include <sstream>
 #include "edge.h"
 #include "node.h"
+#include "graph.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ void testNodeClass();
 void main(int argc, char* argv[]) {
 
 	string fileName = "VM_TestData_M7_p40.txt";
-
+	graph theGraph;
 
 	// Open File
 	ifstream inFile(fileName);
@@ -36,9 +37,10 @@ void main(int argc, char* argv[]) {
 
 			tempNode.addEdge(edge(stoi(origin), stoi(destination), stod(weight))); // Add edge info into the node
 		}
-		cout << tempNode;
-		cout << endl;
+		theGraph.addNode(tempNode);
 	}
+		cout << theGraph.toString();
+		cout << endl;
 
 }
 

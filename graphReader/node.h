@@ -28,7 +28,7 @@ public:
 		string retString = "Node: " + to_string(getID()) + "\n";
 
 		for (int i = 0; i < edges.size(); i++) {
-			retString += " " + to_string(edges[i].getD()) + " " + to_string(edges[i].getW());
+			retString += " " + to_string(edges[i].getD()) + " " + to_string(edges[i].getW()) + "\n";
 		}
 
 		return retString;
